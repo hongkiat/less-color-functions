@@ -1,0 +1,56 @@
+// variables
+@color: #7bab2e;
+@colorDark: darken(@color, 20%);
+@colorLight: lighten(@color, 10%);
+@colorSpin: spin(@color, 123);
+@colorSaturation: desaturate(spin(@color, 123), 50%);
+
+@blue: #66c9ee;
+@yellow: #ffd200;
+
+// styles
+h3 {
+	border-bottom: 1px solid #ccc; 
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+section {
+	padding: 25px 25px 25px 25px;
+}
+section:target {
+	background-color: #eaeaea;
+}
+.wrapper {
+	width: 600px;
+	margin: 50px auto 0;	
+}
+.box {
+	width: 200px;
+	height: 200px;
+	margin: 25px auto;
+	background-color: @color;
+}
+
+// Darkening
+.box.darken {
+	border: 3px solid darken(@color, 20%); //@colorDark;
+}
+// Lightening
+.box.lighten {
+	border: 3px solid lighten(@color, 20%); //@colorLight;
+}
+
+// Spinning
+.box.hue {
+	background-color: spin(@color, 123); //@colorLight;
+}
+
+// Desaturate
+.box.desaturate {
+	background-color: desaturate(spin(@color, 123), 50%); //@colorLight;
+}
+
+// Mix
+.box.mix {
+	background-color: mix(@blue, @yellow, 50%);
+}

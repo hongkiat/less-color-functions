@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+LESS Color Functions - Hongkiat.com
+</title>
+
+<!--  jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+
+<!-- demo scripts -->
+<link rel="stylesheet/less" type="text/css" href="style.less">
+<script src="less.js" type="text/javascript"></script>
+
+<!-- nav script -->
+<script src="../_nav/js/nav.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- nav meta -->
+<div class="demo-meta">
+  <h1 class="demo-title">LESS Color Functions</h1>
+  <p class="demo-desc">This demo shows some of the implementations of LESS color functions.</p>
+</div>
+
+<!-- demo content -->
+<div class="wrapper">
+
+<section id="one">
+<!-- Darkening -->
+<h3>Darkening</h3>
+<div class="box darken">
+
+</div>
+<pre>
+.box.darken {
+	border: 3px solid darken(@color, 10%);
+}
+</pre>
+<!-- Lightening -->
+<h3>Lightening</h3>
+<div class="box lighten">
+	
+</div>
+<pre>
+.box.lighten {
+	border: 3px solid darken(@color, 10%);
+}
+</pre>
+</section>
+
+<section id="two">
+<h3>Hue</h3>
+<div class="box hue">
+
+</div>
+<pre>
+.box.hue {
+	background-color: spin(@color, 123);
+}
+</pre>
+
+<h3>Saturation</h3>
+<div class="box desaturate">
+
+</div>
+<pre>
+.box.desaturate {
+	background-color: desaturate(spin(@color, 123), 50%);
+}
+</pre>
+</section>
+
+<section id="three">
+<h3>Mix Colors</h3>
+<div class="box mix">
+	
+</div>
+<pre>
+.box.mix {
+	background-color: spin(mix(@blue, @yellow, 50%), 15);
+}
+</pre>
+</section>
+</div>
+
+</body>
+</html>
